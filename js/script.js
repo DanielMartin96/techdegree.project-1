@@ -38,18 +38,18 @@ let quotes = [
 
 function getRandomQuote(array) {
   const randomNumber = Math.floor(Math.random() * array.length)
-  const randomQuote = array[randomNumber];
-  return randomQuote;
+  const Quote = array[randomNumber];
+  return Quote;
 }
 
 function printQuote() {
-  const getRandomQuote2 = getRandomQuote(quotes);
-  let html = `<p class="quotes">${getRandomQuote2.quote}</p><p class="source">${getRandomQuote2.source}`
-    if (getRandomQuote2.citation != '') {
-      html += `<span class="citation">${getRandomQuote2.citation}</span>`
+  const randomQuote = getRandomQuote(quotes);
+  let html = `<p class="quotes">${randomQuote.quote}</p><p class="source">${randomQuote.source}`
+    if (randomQuote.citation != '') {
+      html += `<span class="citation">${randomQuote.citation}</span>`
       }
-    if (getRandomQuote2.year != '') {
-      html += `<span class="year">${getRandomQuote2.year}</span>`
+    if (randomQuote.year != '') {
+      html += `<span class="year">${randomQuote.year}</span>`
       }
       html += `</p>`;
     
