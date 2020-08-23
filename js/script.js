@@ -44,7 +44,7 @@ function getRandomQuote(array) {
 
 function printQuote() {
   const randomQuote = getRandomQuote(quotes);
-  let html = `<p class="quotes">${randomQuote.quote}</p><p class="source">${randomQuote.source}`
+  let html = `<p class="quote">${randomQuote.quote}</p><p class="source">${randomQuote.source}`
     if (randomQuote.citation != '') {
       html += `<span class="citation">${randomQuote.citation}</span>`
       }
