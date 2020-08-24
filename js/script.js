@@ -36,11 +36,17 @@ let quotes = [
   },
 ];
 
+// The function below calculates a random number between 0 and the number of OL in the array.
+// It then uses that number you get a random quote from the array
+
 function getRandomQuote(array) {
   const randomNumber = Math.floor(Math.random() * array.length)
   const Quote = array[randomNumber];
   return Quote;
 }
+
+// The function below prints the random quote and the desired properties to the html page.
+// If the quote does not hold values in citation and year then it will not print them.
 
 function printQuote() {
   const randomQuote = getRandomQuote(quotes);
